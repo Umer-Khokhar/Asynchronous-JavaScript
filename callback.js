@@ -19,6 +19,7 @@ function getPost() {
 // }
 // setPost({title: "Third Game", Game: "WWE 2K22"})
 
+// getPost()
 
 // You can see if you commit out seciotn function setPost only first two titles are printed out but, uncommit setPost and still printing only first two this is called Async JavaScript if you only commit setTimpout and get mygame.push out of the settimeout you notice that third game is printed out because setPost is delayed for 2 seconds there for the third game is not printed out because getpost is not delayed and dom is only update at once so, third game never gonna be to printed out here comes the callback function which comes to realy handy in these situations
 // ------------------------------------------ //
@@ -32,7 +33,6 @@ function creatPost(game, callback) {
     }, 2000)
 }
 creatPost({title: "Third Game", Game: "Talking Tom Gold Run"}, getPost)
-
 
 
 

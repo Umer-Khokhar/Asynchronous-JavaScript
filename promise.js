@@ -2,7 +2,7 @@ function fetchData() {
   return new Promise(function (resolve, reject) {
     setTimeout(() => {
       const ranNum = Math.floor(Math.random() * 10.124356565543);
-      if (ranNum <= 6) {
+      if (ranNum <= 5) {
         resolve(ranNum);
       } else {
         reject("Error: Something wents wrong!");
@@ -14,7 +14,7 @@ function myResolve(randomNum) {
   console.log(`Your data: ${randomNum}`);
 }
 function myerror(err) {
-  console.error(err);
+  console.log(err);
 }
 fetchData()
 .then(myResolve)

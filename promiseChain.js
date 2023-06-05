@@ -1,14 +1,16 @@
 let loadScript = (source) => {
   return new Promise((resolve, reject) => {
-    let script = document.createElement("script");
-    script.src = source;
-    document.body.appendChild(script);
-    script.onload = () => {
-      resolve(script);
-    };
-    script.onerror = () => {
-      reject("Error: Sorry Your Script is not loaded");
-    };
+    setTimeout(() => {
+      let script = document.createElement("script");
+      script.src = source;
+      document.body.appendChild(script);
+      script.onload = () => {
+        resolve(script);
+      };
+      script.onerror = () => {
+        reject("Error: Sorry Your Script is not loaded");
+      };
+    }, 2000);
   });
 };
 
@@ -29,7 +31,7 @@ p1.then((script1) => {
   .then((script2) => {
     setTimeout(() => {
       console.log("Your Script2: ", script2);
-    }, 4000);
+    }, 2000);
     return loadScript("https://cdn.jsdelivr.net/npm/clappr@latest");
   })
   .then((script3) => {

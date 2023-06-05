@@ -33,19 +33,19 @@ let p3 = new Promise((resolve, reject) => {
 
 let promise_all = Promise.allSettled([p1, p2, p3])
 
-// ------- Promise.allSettled() ------- //
+// ------- Promise.race() ------- //
 
 // let promise_all = Promise.race([p1, p2, p3])
 
-// ------- Promise.allSettled() ------- //
+// ------- Promise.any() ------- //
 
 // let promise_all = Promise.any([p1, p2, p3])
 
-// ------- Promise.allSettled() ------- //
+// ------- Promise.resolve() ------- //
 
 // let promise_all = Promise.resolve('1')
 
-// ------- Promise.allSettled() ------- //
+// ------- Promise.reject() ------- //
 
 // let promise_all = Promise.reject(2)
 
@@ -58,10 +58,10 @@ console.log(fetchData)
 
 // You can see that promise.all return the array of all three promises but what if from above three promises any of them is rejected?, if anyone is rejected then you will not see any of the array with the promise.all()
 
-//.allSettled return an array even if the one of the promise is rejected but you can is the status either fullfil or rejected!
+//.allSettled return an array even if the one of the promise is rejected but you can get the status either fullfil or rejected!
 
-// But what if you want to get the first recieved promise here comes .race() method. Only down side of .race is if the first recieved promise is rejected or throw any error this will not work here is another method below
+// But what if you want to get the first recieved promise, here comes .race() method. Only down side of .race is if the first recieved promise is rejected or throw any error this will not work here is another method below
 
-// .any() method recieved the first method that is fullfiled not recieved and method that is rejected
+// .any() method recieved the first method that is fullfiled not recieved the method that is rejected
 
-// .reject() recieced the rejected and catch error and .resolve method recieved the resolved and .then
+// .reject() recieced the rejected and catch error and .resolve() method recieved the resolved and .then
